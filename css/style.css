@@ -1,0 +1,328 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #17222D;
+}
+
+body, p, h1, h2, h3, ul , li {
+    padding: 0;
+    margin: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* GRID */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container::after, .container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12 {
+    display: block;
+    min-height: 1px;
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.grid-1 {
+    width: calc(8.333% - 30px);
+}
+
+.grid-2 {
+    width: calc(16.666% - 30px);
+}
+
+.grid-3 {
+    width: calc(25% - 30px);
+}
+
+.grid-4 {
+    width: calc(33.333% - 30px);
+}
+
+.grid-5 {
+    width: calc(41.666% - 30px);
+}
+
+.grid-6 {
+    width: calc(50% - 30px);
+}
+
+.grid-7 {
+    width: calc(58.333% - 30px);
+}
+
+.grid-8 {
+    width: calc(66.666% - 30px);
+}
+
+.grid-9 {
+    width: calc(75% - 30px);
+}
+
+.grid-10 {
+    width: calc(83.333% - 30px);
+}
+
+.grid-11 {
+    width: calc(91.666% - 30px);
+}
+
+.grid-12 {
+    width: calc(100% - 30px);
+}
+
+/* HEADER */
+
+.header {
+    background: #17222D;
+    padding: 5px 0;
+}
+
+.header-info {
+    background: #1188EE;
+}
+
+.header-info p {
+    color: #fff;
+    padding: 5px 0;
+    font-size: 0.875em;
+}
+
+.header-nav ul {
+    float: right;
+    margin-top: 10px;
+}
+
+.header-nav li {
+    display: inline-block;
+}
+
+.header-nav li a {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.125em;
+    color: #fff;
+    padding: 10px;
+}
+
+.header-nav li a::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-left: 15px;
+}
+
+.header-nav li:last-child a::after {
+    display: block;
+    width: 100px;
+    height: 2px;
+    border: none;
+    border-radius: 0;
+    margin-left: 10px;
+    background: red;
+    position: absolute;
+}
+
+/* intro */
+.intro {
+    padding: 260px 0 60px 0;
+    background: url(../img/bg-intro.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.intro h1 {
+    font-family: 'Alice', serif;
+    font-size: 4.5em;
+    font-weight: 400;
+    color: #fff;
+}
+
+.intro form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    
+}
+
+.intro form label {
+    display: none;
+}
+
+.intro form input {
+    margin-left: auto;
+    flex: 1;
+    max-width: 285px;
+    outline: none;
+    border: none;
+    padding: 15px;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0px 5px 5px rgba(23, 34, 45, 0.4);
+}
+
+.intro form button {
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: #EE2211;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0px 5px 5px rgba(23, 34, 45, 0.4);
+}
+
+/* Praia */
+
+.praia {
+    padding: 60px 0;
+}
+
+.praia-info .mapa{
+    position: relative;
+    top: -60px;
+    left: 15px;
+    
+}
+
+.praia-info img {
+    box-shadow: 0px 10px 10px rgba(187, 204, 221, 0.2), 0px 5px 5px rgba(187, 204, 221, 0.3);
+}
+
+.praia-info h3 {
+    font-size: 0.875em;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: -30px;
+    margin-left: 15px;
+}
+
+.praia-info h3::before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    box-sizing: border-box;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #EE2211;
+    border-radius: 50%;
+}
+
+.praia-info ul {
+    margin-left: 15px;
+}
+
+.praia-info li {
+    font-size: 0.875em;
+    color: #BBCCDD;
+    line-height: 2;
+}
+
+.praia-info li::before {
+    content: '';
+    display: inline-block;
+    box-sizing: border-box;
+    margin:  0 10px 5px 0;
+    width: 10px;
+    height: 2px;
+    background: #1188EE;
+}
+
+.praia-info li span {
+    color: #17222D;
+    font-weight: bold;
+}
+
+/* praia sobre */
+
+.praia-sobre {
+    padding-left: 100px;
+}
+
+.praia-sobre h2 {
+    font-family: 'Alice', serif;
+    font-size: 4.5em;
+}
+
+.praia-sobre h2 span {
+    color: #1188EE;
+}
+
+.praia-sobre ul {
+    margin: 60px 0 30px 0;
+}
+
+.praia-sobre li {
+    font-size: 1.5em;
+    padding: 30px 0;
+    border-bottom: 2px solid #EFF4F9;
+}
+
+.praia-sobre li span {
+    display: inline-block;
+    position: relative;
+    top: -10px;
+}
+
+
+
+.praia-sobre li::before {
+    content: '';
+    display: inline-block;
+    width: 80px;
+    height: 65px;
+    position: relative;
+    top: 15px;
+    
+}
+
+.chinelo::before {
+    background: url(../img/icon_chinelo.svg) no-repeat ;
+}
+
+.coco::before {
+    background: url(../img/icon_coco.svg) no-repeat ;
+}
+
+.boia::before {
+    background: url(../img/icon_boia.svg) no-repeat ;
+}
+
+.praia-sobre li:first-child {
+    border-top: 2px solid #EFF4F9;
+}
+
+.praia-sobre p {
+    font-size: 1.125em;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
