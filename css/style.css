@@ -99,6 +99,19 @@ p {
     width: calc(100% - 30px);
 }
 
+@media only screen and (max-width: 768px) { 
+    .container {
+        max-width: 300px;
+    }
+    .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12 {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+ }
+
 /* HEADER */
 
 .header {
@@ -150,9 +163,43 @@ p {
     border: none;
     border-radius: 0;
     margin-left: 10px;
-    background: red;
+    background: #EE2211;
     position: absolute;
 }
+
+@media only screen and (max-width: 768px) { 
+    .header .logo img{
+        margin: 10px auto;
+    }
+    .header {
+        padding: 10px 0;
+    }
+    .header-nav li a::after {
+        display: none;
+    } 
+    .header-nav li:last-child a::after {
+        display: none;
+    }
+    .header-nav ul {
+        float: none;
+        display: inline-block;
+    }
+    .header-nav li {
+        width: calc(50% - 10px);
+        margin: 0 10px 10px 0;
+       display: block;
+       float: left;
+    }
+    .header-nav li a {
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+        padding: 10px;
+        border: solid 2px #445566;
+    }
+    
+
+ }
 
 /* intro */
 .intro {
@@ -197,8 +244,36 @@ p {
     font-family: 'Nunito', sans-serif;
     color: #fff;
     text-transform: uppercase;
-    box-shadow: 0px 5px 5px rgba(23, 34, 45, 0.4);
+    box-shadow: 0px 5px 3px rgba(23, 34, 45, 0.4);
+    font-size: 1.125em;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
 }
+
+.intro form button img {
+    margin: 6px 0 0 10px;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 768px) { 
+    .intro {
+        padding: 60px 0;
+        background: url(../img/bg-intro.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    .intro form input {
+        max-width: 300px;
+        border-radius: 5px 5px 0 0;
+    }
+    .intro form button {
+        border-radius: 0 0 5px 5px;
+        width: 100%;
+    }
+    .intro h1 {
+        font-size: 4em;
+    }
+ }
 
 /* Praia */
 
@@ -326,3 +401,336 @@ p {
     line-height: 1.4;
     margin-bottom: 30px;
 }
+
+@media only screen and (max-width: 768px) { 
+    .praia-sobre {
+        margin-top: 60px;
+        padding-left: 0;
+    }
+    
+    .praia-sobre h2 {
+        font-family: 'Alice', serif;
+        font-size: 3em;
+    }
+
+    .praia-sobre li {
+        font-size: 1em;
+        padding: 30px 0;
+        border-bottom: 2px solid #EFF4F9;
+    }
+ }
+
+/* Aulas */
+.aulas {
+    background: #EFF4F9;
+    padding-bottom: 60px;
+}
+
+.aulas::before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    height: 63px;
+    background: url(../img/ondas.svg) no-repeat center center;
+    position: relative;
+    top: -30px;
+}
+
+.aulas h2 {
+    font-family: 'Alice', serif;
+    font-size: 4.5em;
+    color: #445566;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.aulas-item {
+    background: #FFF;
+    padding:  30px 60px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px rgba(187, 204, 221, 0.4), 0px 5px 5px rgba(187, 204, 221, 0.4);
+}
+
+.aulas-item::before {
+    content: '';
+    display: block;
+    margin: -55px auto 0 auto;
+    background: url(../img/surfbot-icon.svg);
+    height: 47px;
+}
+
+.infantil::before {
+    width: 31px;
+}
+
+.adulto::before {
+    width: 62px;
+}
+
+.proficional::before {
+    width: 93px;
+}
+
+.aulas-item h3 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.aulas ul {
+    margin-bottom: 30px;
+}
+
+.aulas-item ul {
+    padding: 20px 0;
+    border-top: 2px solid #EFF4F9;
+    border-bottom: 2px solid #EFF4F9;
+    margin-bottom: 15px;
+    
+}
+
+.aulas-item li {
+    font-size: 0.875em;
+    line-height: 2.125em;
+}
+
+.aulas-item li::before {
+    content: '';
+    box-sizing: border-box;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #FF3726;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 1px;
+}
+
+.aulas-item p {
+    font-size: 0.875em;
+    color: #1188EE;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.aulas-item .btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.125em;
+    background: #445566;
+    padding: 10px 15px;
+    display: block;
+    color: #fff;    
+    border-radius: 5px;
+}
+
+.aulas-item .btn::after {
+    content: '';
+    display: inline-block;
+    background: url(../img/seta.svg) no-repeat center center;
+    width: 14.5px;
+    height: 16px;
+    float: right;
+    margin-top: 4px;
+}
+
+.aulas > p {
+    font-size: 1.125em;
+    text-align: center;
+    max-width: 419px;
+    margin: 0 auto;
+}
+
+.aulas .red {
+    color: #FF3726;
+    font-weight: bold;
+}
+
+.aulas .underline::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 90px;
+    height: 2px;
+    background: #FF3726;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) { 
+    .aulas-item {
+        margin-bottom: 60px;
+    }
+ }
+
+/* Quote */
+
+.quote {
+    background: url(../img/bg_quote.jpg);
+    background-size: cover;
+    padding: 120px 0;
+}
+.quote p {
+    font-family: 'Alice', serif;
+    font-size: 4.5em;
+    color: #FFF;
+    max-width: 630px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quote cite {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.125em;
+    font-style: normal;
+}
+
+@media only screen and (max-width: 768px) { 
+    .quote p {
+        font-size: 3em;
+    }
+    .quote {
+        padding: 60px 0;
+    }
+ }
+
+/* Contato */
+
+.contato {
+    padding: 60px 0;
+}
+
+.contato h2 {
+    font-family: 'Alice', serif;
+    font-size: 4.5em;
+    font-weight: normal;
+    text-align: center;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #EFF4F9;
+}
+
+.contato label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.125em;
+    color: #17222D;  
+    
+}
+
+.contato input, .contato textarea {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.125em;
+    color: #17222D;  
+    margin-bottom: 5px;
+    background: #EFF4F9;
+    box-shadow: 0px 2px 2px rgba(187, 204, 221, 0.4);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    max-width: 470px;
+}
+
+.contato button {
+    max-width: 250px;
+    padding: 10px 15px;
+    background: #445566;
+    box-shadow: 0px 2px 2px rgba(187, 204, 221, 0.4);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 1.125em;
+    margin-top: 30px;
+}
+
+.contato button img {
+    float: right;
+}
+
+@media only screen and (max-width: 768px) { 
+    .contato form {
+        border-right: none;
+    }
+ }
+
+/* Dados */
+.dados {
+    background: url(../img/bg-icones.svg) no-repeat right ;
+}
+
+
+.dados h3 {
+    font-size: 1.125em;
+    font-weight: bold;
+    color: #445566;
+}
+
+.dados ul {
+    border-bottom: 2px solid #EFF4F9;
+    padding: 15px 0; 
+    max-width: 270px;
+}
+
+.dados ul:last-child {
+    border: none;
+}
+
+
+.dados a {
+    font-size: 1.125em;
+    font-weight: bold;
+    color: #445566;
+    text-transform: uppercase;
+}
+
+.dados a::after {
+    content: '';
+    display: inline-block;
+    background: url(../img/seta_red.svg);
+    width: 16px;
+    height: 18px;
+    margin-left: 10px;
+}
+
+.horario::before {
+    content: '';
+    display: inline-block;
+    box-sizing: border-box;
+    width: 6px;
+    height: 6px;
+    border: 2px solid #11DD44;
+    border-radius: 50%;
+    margin: 0 5px 3px -11px;
+}
+
+/* Footer */
+.footer {
+    padding: 30px 0;
+    color: #fff;
+    background: #1188EE;
+}
+
+.footer p {
+    margin-top: 15px;
+}
+
+.footer a img {
+    float: right;
+}
+
+@media only screen and (max-width: 768px) { 
+    .footer a img {
+        float: none;
+        margin: 20px auto 0 auto;
+    }
+ }
